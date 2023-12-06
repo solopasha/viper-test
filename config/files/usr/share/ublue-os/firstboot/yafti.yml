@@ -1,11 +1,11 @@
-title: Welcome to uBlue
+title: Welcome to Viper
 properties:
   mode: "run-on-change"
 screens:
   first-screen:
     source: yafti.screen.title
     values:
-      title: "Welcome to uBlue (Alpha)"
+      title: "Welcome to Viper"
       icon: "/path/to/icon"
       description: |
         This guided installer will help you get started with your new system.

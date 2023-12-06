@@ -1,5 +1,5 @@
 # image will be published to ghcr.io/<user>/<name>
-name: viper
+name: Viper
 # description will be included in the image's metadata
 description: This is Viper OS image.
 
@@ -22,10 +22,82 @@ modules:
           # config directory on ostree. Read more in the files module's README
 
   - type: rpm-ostree
-    repos: # - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+    repos: 
+      - https://copr.fedorainfracloud.org/coprs/solopasha/hyprland/repo/fedora-39/solopasha-hyprland-fedora-39.repo
     install:
-      # - micro
-      # - starship
+      # hyprland
+      - hyprland
+      - hyprpaper
+      - hyprpicker
+      - hyprshot
+      - xdg-desktop-portal-hyprland
+
+      # sway
+      - swaybg
+      - swayidle
+      - swaylock
+      
+      # wayland
+      - wlroots  
+      - xorg-x11-server-Xwayland
+      - wl-clipboard
+      - wf-recorder
+      - wlogout
+      - sddm-wayland-generic
+      
+      # GNOME Stuff
+      - polkit-gnome
+      - gnome-keyring-pam
+      - nautilus
+      - file-roller
+
+      # audio
+      - pipewire
+      - wireplumber
+      - pavucontrol
+      
+      # bluetooth
+      - blueman
+      
+      # network
+      - network-manager-applet
+      - NetworkManager-l2tp-gnome
+      - NetworkManager-libreswan-gnome
+      - NetworkManager-openconnect-gnome
+      - NetworkManager-openvpn-gnome
+      - NetworkManager-pptp-gnome
+      - NetworkManager-sstp-gnome
+      - NetworkManager-vpnc-gnome
+      
+      # qt
+      - qt5-qtwayland
+      - qt6-qtwayland
+
+      # terminal apps
+      - kitty
+      - eza
+      - duf
+      - micro
+      - tldr
+      - fd-find
+
+      # other
+      - system-config-printer
+      - plymouth-system-theme
+      - bolt
+      - brightnessctl
+      - fprintd-pam
+      - lxqt-policykit
+      
+      # apps
+      - copyq
+      - udiskie
+      - yad
+      - mako
+      - foot
+      - rofi-wayland
+      - waybar
+      
     remove:
       - firefox # default firefox removed in favor of flatpak
       - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
