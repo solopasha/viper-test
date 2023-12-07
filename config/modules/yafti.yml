@@ -1,0 +1,16 @@
+type: yafti # if included, https://github.com/ublue-os/yafti will be installed and set up
+custom-flatpaks: # this section is optional
+  - adw-gtk3 (GTK Theme): org.gtk.Gtk3theme.adw-gtk3-dark
+  - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+  - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
+
+#  - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
+#  - Bottles: com.usebottles.bottles
+#  - Heroic Games Launcher: com.heroicgameslauncher.hgl
+#  - Steam: com.valvesoftware.Steam
+#  - Gamescope (Utility): org.freedesktop.Platform.VulkanLayer.gamescope
+#  - MangoHUD (Utility): org.freedesktop.Platform.VulkanLayer.MangoHud//22.08
+#  - Proton GE (Custom Proton Version): com.valvesoftware.Steam.CompatibilityTool.Proton-GE
+#  - Obsidian: md.obsidian.Obsidian
+
+
