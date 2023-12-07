@@ -57,7 +57,10 @@ modules:
       - pavucontrol
       
       # bluetooth
+      - bluez
+      - bluez-tools
       - blueman
+      - python3-cairo
       
       # network
       - network-manager-applet
@@ -70,6 +73,9 @@ modules:
       - NetworkManager-vpnc-gnome
       
       # qt
+      - qt5-qtgraphicaleffects
+      - qt5-qtquickcontrols
+      - qt5-qtquickcontrols2
       - qt5-qtwayland
       - qt6-qtwayland
 
@@ -88,6 +94,8 @@ modules:
       - brightnessctl
       - fprintd-pam
       - lxqt-policykit
+      - gvfs
+      - gvfs-mtp
       
       # apps
       - copyq
@@ -131,3 +139,4 @@ modules:
     scripts:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
+      - sddm.sh
