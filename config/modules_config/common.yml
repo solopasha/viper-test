@@ -13,10 +13,11 @@ modules:
   - from-file: packages.yml
   - from-file: bling.yml
   - from-file: yafti.yml
+  - from-file: systemd.yml
 
   - type: script
     scripts: 
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       #- post-install.sh
-  - from-file: systemd.yml
+
