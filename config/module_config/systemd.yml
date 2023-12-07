@@ -1,0 +1,9 @@
+# you can enable and disable systemd services here
+
+type: systemd
+system:
+  enabled:
+     - sddm.service
+  #  - power-profiles-daemon
+  disabled:
+   # - rpm-ostree-countme.timer

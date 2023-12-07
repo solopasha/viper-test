@@ -1,0 +1,9 @@
+# You can put the fixes and patches for nvidia in this file and copy necessary files and then just call this file in recipe-nvidia.yml
+
+# To copy and move files:
+#- type: files
+#    files:
+
+# To run scripts:
+#- type: script
+#    scripts: 
