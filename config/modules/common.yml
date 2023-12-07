@@ -10,13 +10,13 @@ modules:
                   # added into /usr/etc/ as that is the proper "distro" config directory on ostree
                   # read more in the files module's README
 
-  - from-file: modules/packages.yml
-  - from-file: modules/bling.yml
-  - from-file: modules/yafti.yml
+  - from-file: packages.yml
+  - from-file: bling.yml
+  - from-file: yafti.yml
 
   - type: script
     scripts: 
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
       #- post-install.sh
-  - from-file: modules/systemd.yml
+  - from-file: systemd.yml
