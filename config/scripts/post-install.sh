@@ -5,6 +5,8 @@
 # builds actually ran successfully without any errors!
 
 # set sddm as default
+set -oue pipefail
+
 systemctl set-default graphical.target 
 
-set -oue pipefail
+
