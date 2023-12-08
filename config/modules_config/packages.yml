@@ -68,6 +68,7 @@ install:
    - kvantum
 
    # terminal apps
+   - zsh
    - kitty
    - eza
    - duf
