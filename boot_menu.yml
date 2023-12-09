@@ -1,9 +1,9 @@
 ublue_variants:
-  - label: Heus-Sueh/ublue-template
+  - label: Heus-Sueh/viper
     ks: /kickstart/Heus-Sueh.ks
     flavors:
-      - label: ublue-template
-  - label: Heus-Sueh/ublue-template-nvidia
+      - label: viper
+  - label: Heus-Sueh/viper-nvidia
     ks: /kickstart/ublue-os-nvidia.ks
     flavors:
-      - label: ublue-template-nvidia
+      - label: viper-nvidia
