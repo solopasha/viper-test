@@ -87,6 +87,7 @@ install:
    - mesa-vulkan-drivers
 
    # others
+   - plymouth
    - gnome-keyring-pam
    - qemu-guest-agent
    - pam_afs_session
