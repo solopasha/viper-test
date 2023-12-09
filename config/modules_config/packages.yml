@@ -17,6 +17,7 @@ install:
    - swayidle
    - swaylock
    - sddm-wayland-sway
+   - sddm-breeze
 
    # wayland
    - wlroots  
@@ -69,6 +70,8 @@ install:
 
    # terminal apps
    - zsh
+   - zsh-autosuggestions 
+   - zsh-syntax-highlighting 
    - kitty
    - eza
    - duf
