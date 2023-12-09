@@ -10,4 +10,7 @@ set -oue pipefail
 # set sddm as default
 systemctl set-default graphical.target 
 
+# latest distrobox
+#curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
+
 

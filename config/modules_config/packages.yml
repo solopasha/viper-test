@@ -13,6 +13,7 @@ install:
    - hyprpaper
    - hyprpicker
    - hyprshot
+   - sddm
 
    # sway
    - swaybg
@@ -105,5 +106,6 @@ install:
    - foot
 
 remove:
+   #- distrobox
    - firefox # default firefox removed in favor of flatpak
    - firefox-langpacks # langpacks needs to also be removed to prevent dependency problems
