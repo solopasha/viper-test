@@ -5,19 +5,20 @@ repos:
 install:
    # hyprland
    - hyprland
-   - hyprpaper
-   - hyprpicker
-   - hyprshot
    - xdg-desktop-portal-hyprland
    - xdg-user-dirs
    - dunst
+   - rofi-wayland
+   - waybar
+   - hyprpaper
+   - hyprpicker
+   - hyprshot
 
    # sway
    - swaybg
    - swayidle
    - swaylock
    - sddm-wayland-sway
-   - sddm-breeze
 
    # wayland
    - wlroots  
@@ -26,11 +27,10 @@ install:
    - wf-recorder
    - wlogout
 
-   # GNOME Stuff
-   - polkit-gnome
-   - gnome-keyring-pam
-   - nautilus
-   - file-roller
+   # KDE Stuff
+   - polkit-kde
+   - dolphin
+   - ark
 
    # android
    - android-tools
@@ -68,6 +68,7 @@ install:
    - qt5-qtsvg
    - kvantum
 
+
    # terminal apps
    - zsh
    - zsh-autosuggestions 
@@ -78,8 +79,17 @@ install:
    - micro
    - tldr
    - fd-find
+   - udiskie
 
-   # other
+   # Drivers
+   - mesa-dri-drivers
+   - mesa-vulkan-drivers
+
+   # others
+   - gnome-keyring-pam
+   - qemu-guest-agent
+   - pam_afs_session
+   - selinux-policy-targeted
    - system-config-printer
    - plymouth-system-theme
    - bolt
@@ -91,11 +101,8 @@ install:
 
    # apps
    - copyq
-   - udiskie
    - yad
    - foot
-   - rofi-wayland
-   - waybar
 
 remove:
    - firefox # default firefox removed in favor of flatpak
