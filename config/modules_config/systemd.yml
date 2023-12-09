@@ -3,6 +3,7 @@
 type: systemd
 system:
   enabled:
+     - display-manager.service
      - sddm.service
   #  - power-profiles-daemon
   disabled:
