@@ -16,6 +16,7 @@ install:
    - swaybg
    - swayidle
    - swaylock
+   - sddm-wayland-sway
 
    # wayland
    - wlroots  
