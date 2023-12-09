@@ -6,7 +6,7 @@
 set -oue pipefail
 
 # Repository URL
-REPO_URL="https://api.github.com/repos/JaKooLit/Hyprland-Dots"
+REPO_URL=""
 
 # Set some colors for output messages
 OK="$(tput setaf 2)[OK]$(tput sgr0)"
@@ -40,25 +40,25 @@ print_error() {
 
 # Function to check for the existence of Hyprland-Dots.tar.gz
 check_existing_tarball() {
-  if [ -f Hyprland-Dots.tar.gz ]; then
-    print_note "Hyprland-Dots.tar.gz found."
+  if [ -f Dotfiles.tar.gz ]; then
+    print_note "Dotfiles.tar.gz found."
 
-    existing_version=$(echo Hyprland-Dots.tar.gz | grep -oP 'v\d+\.\d+\.\d+' | sed 's/v//')
+    existing_version=$(echo Dotfiles.tar.gz | grep -oP 'v\d+\.\d+\.\d+' | sed 's/v//')
     latest_version=$(curl -s "$REPO_URL/releases/latest" | grep "tag_name" | cut -d '"' -f 4 | sed 's/v//')
 
     if [ "$existing_version" = "$latest_version" ]; then
-      print_ok "Hyprland-Dots.tar.gz is up-to-date with the latest release ($latest_version)."
+      print_ok "Dotfiles.tar.gz is up-to-date with the latest release ($latest_version)."
       print_note "No update found. Sleeping for 10 seconds..."
       sleep 10
       exit 0
     else
-      print_warn "Hyprland-Dots.tar.gz is outdated (Existing version: $existing_version, Latest version: $latest_version)."
+      print_warn "Dotfiles.tar.gz is outdated (Existing version: $existing_version, Latest version: $latest_version)."
       read -p "Do you want to upgrade to the latest version? (y/n): " upgrade_choice
       if [ "$upgrade_choice" = "y" ]; then
         print_note "Proceeding to download the latest release."
-        find . -type d -name 'JaKooLit-Hyprland-Dots*' -exec rm -rf {} +
-        rm -f Hyprland-Dots.tar.gz
-        print_warn "Removed existing Hyprland-Dots.tar.gz."
+        find . -type d -name 'Dotfiles*' -exec rm -rf {} +
+        rm -f Dotfiles.tar.gz
+        print_warn "Removed existing Dotfiles.tar.gz."
       else
         print_note "User chose not to upgrade. Exiting..."
         exit 0
@@ -69,7 +69,7 @@ check_existing_tarball() {
 
 # Function to download the latest release of Hyprland-Dots
 download_latest_release() {
-  print_note "Downloading the latest Hyprland source code release..."
+  print_note "Downloading the latest Dotfiles source code release..."
 
   latest_tag=$(curl -s "$REPO_URL/releases/latest" | grep "tag_name" | cut -d '"' -f 4)
 
@@ -85,16 +85,16 @@ download_latest_release() {
     exit 1
   fi
 
-  file_name="Hyprland-Dots-${latest_tag}.tar.gz"
+  file_name="Dotfiles-${latest_tag}.tar.gz"
 
   if curl -L "$latest_tarball_url" -o "$file_name"; then
     tar -xzf "$file_name" || exit 1
-    rm -rf JaKooLit-Hyprland-Dots
+    rm -rf Dotfiles
 
     extracted_directory=$(tar -tf "$file_name" | grep -o '^[^/]\+' | uniq)
-    mv "$extracted_directory" JaKooLit-Hyprland-Dots || exit 1
+    mv "$extracted_directory" Dotfiles || exit 1
 
-    cd "JaKooLit-Hyprland-Dots" || exit 1
+    cd "Dotfiles" || exit 1
     chmod +x copy.sh
     ./copy.sh 2>&1 | tee -a "../install-$(date +'%d-%H%M%S')_dots.log"
 
@@ -106,7 +106,7 @@ download_latest_release() {
 }
 
 # Main execution
-print_note "Downloading / Checking for existing Hyprland-Dots.tar.gz..."
+print_note "Downloading / Checking for existing Dotfiles.tar.gz..."
 check_existing_tarball
 download_latest_release
 

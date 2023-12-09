@@ -1,10 +1,9 @@
 type: yafti # if included, https://github.com/ublue-os/yafti will be installed and set up
 custom-flatpaks: # this section is optional
   - LibreWolf (Browser): io.gitlab.librewolf-community
-  - adw-gtk3 (GTK Theme): org.gtk.Gtk3theme.adw-gtk3-dark
-  - Flatseal (Permission Manager): com.github.tchx84.Flatseal
-  - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
-
+#  - adw-gtk3 (GTK Theme): org.gtk.Gtk3theme.adw-gtk3-dark
+#  - Flatseal (Permission Manager): com.github.tchx84.Flatseal
+#  - Gradience (GTK4 theming): com.github.GradienceTeam.Gradience/x86_64/stable
 #  - Pods (Graphical Podman Frontend): com.github.marhkb.Pods
 #  - Bottles: com.usebottles.bottles
 #  - Heroic Games Launcher: com.heroicgameslauncher.hgl

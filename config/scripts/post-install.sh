@@ -8,6 +8,6 @@
 set -oue pipefail
 
 # set sddm as default
-systemctl set-default graphical.target 
+#systemctl set-default graphical.target 
 
 
