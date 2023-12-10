@@ -1,6 +1,6 @@
 ublue_variants:
   - label: Heus-Sueh/viper
-    ks: /kickstart/Heus-Sueh.ks
+    ks: /kickstart/ublue-os.ks
     flavors:
       - label: viper
   - label: Heus-Sueh/viper-nvidia
