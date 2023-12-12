@@ -59,7 +59,7 @@ install:
    - NetworkManager-sstp-gnome
    - NetworkManager-vpnc-gnome
 
-   # qt
+   # qt stuff
    - qt5-qtgraphicaleffects
    - qt5-qtquickcontrols
    - qt5-qtquickcontrols2
@@ -69,7 +69,10 @@ install:
    - qt6ct
    - qt5-qtsvg
    - kvantum
-
+   
+   # gtk stuff
+   - gsettings-desktop-schemas 
+   - lxappearance
 
    # terminal apps
    - zsh

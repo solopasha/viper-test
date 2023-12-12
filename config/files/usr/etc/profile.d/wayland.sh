@@ -1,4 +1,4 @@
-# Set XDG_CURRENT_DESKTOP to sway (for screencasting and screensharing capabilities)
+# Set XDG_CURRENT_DESKTOP to Hyprland (for screencasting and screensharing capabilities)
 #export XDG_CURRENT_DESKTOP=sway
 #export XDG_SESSION_DESKTOP=sway
 
