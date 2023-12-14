@@ -3,8 +3,9 @@
 type: systemd
 system:
   enabled:
-     - display-manager
-  #  - power-profiles-daemon
+     - sddm
+     #- display-manager
+     #- power-profiles-daemon
   disabled:
      #- lightdm 
      #- gdm 

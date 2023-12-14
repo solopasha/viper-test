@@ -8,7 +8,10 @@
 set -oue pipefail
 
 # set sddm as default
-systemctl set-default graphical.target 
+systemctl set-default graphical.target
+
+# enable display-manager
+systemctl enable display-manager
 
 # latest distrobox
 #curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
