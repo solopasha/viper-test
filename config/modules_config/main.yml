@@ -20,6 +20,6 @@ modules:
       # this sets up the proper policy & signing files for signed images to work
       - signing.sh
      #- pre-install.sh
-      - dotfiles.sh
+      #- dotfiles.sh
       - post-install.sh
 
