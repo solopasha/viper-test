@@ -1,16 +1,17 @@
-#!/bin/bash
+#!/usr/bin/env bash
 
 # Tell build process to exit if there are any errors.
 set -oue pipefail
 
-# Define o URL do repositório
+# Define the repository URL
+cd /tmp
 REPO_URL="https://github.com/prasanthrangan/hyprdots.git"
 
 # Define the destination directories for icons, themes, and cursors
-ICON_DIR="$HOME/.icons"
-THEME_DIR="$HOME/.themes"
-CURSOR_DIR="$HOME/.local/share/icons"
-FONT_DIR="$HOME/.fonts"
+ICON_DIR="/usr/share/icons"
+THEME_DIR="usr/share/themes"
+CURSOR_DIR="/usr/share/icons"
+FONT_DIR="/usr/share/fonts"
 
 # Create directories if they don't exist
 mkdir -p $ICON_DIR
