@@ -23,7 +23,6 @@ install:
 
    # wayland
    - libdrm
-   - wayland-protocols
    - wlroots
    - xorg-x11-proto-devel
    - xorg-x11-server-Xwayland
