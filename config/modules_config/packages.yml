@@ -14,18 +14,14 @@ install:
    - hyprpicker
    - hyprshot
    - sddm
+   - sddm-wayland-generic
 
    # sway
    - swaybg
    - swayidle
    - swaylock
-   - sddm-wayland-sway
 
    # wayland
-   - libdrm
-   - wlroots
-   - xorg-x11-proto-devel
-   - xorg-x11-server-Xwayland
    - wl-clipboard
    - wf-recorder
    - wlogout
