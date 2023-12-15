@@ -184,15 +184,6 @@ jobs:
       - uses: sigstore/cosign-installer@v3.2.0
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
 
-      - name: Sign container image
-        if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
-        run: |
-          cosign sign -y --key env://COSIGN_PRIVATE_KEY ${{ steps.registry_case.outputs.lowercase }}/${{ steps.image_case.outputs.lowercase }}@${TAGS}
-        env:
-          TAGS: ${{ steps.push.outputs.digest }}
-          COSIGN_EXPERIMENTAL: false
-          COSIGN_PRIVATE_KEY: ${{ secrets.SIGNING_SECRET }}
-
       - name: Echo outputs
         if: github.event_name != 'pull_request' && github.ref == 'refs/heads/live'
         run: |
