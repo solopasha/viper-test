@@ -13,6 +13,6 @@ modules:
   - from-file: modules_config/packages.yml
   - from-file: modules_config/bling.yml
   - from-file: modules_config/yafti.yml
-  - from-file: modules_config/fonts.yml
+  #- from-file: modules_config/fonts.yml
   - from-file: modules_config/scripts.yml
   - from-file: modules_config/systemd.yml
