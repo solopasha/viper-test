@@ -13,13 +13,6 @@ modules:
   - from-file: modules_config/packages.yml
   - from-file: modules_config/bling.yml
   - from-file: modules_config/yafti.yml
+  - from-file: modules_config/fonts.yml
+  - from-file: modules_config/scripts.yml
   - from-file: modules_config/systemd.yml
-
-  - type: script
-    scripts: 
-      # this sets up the proper policy & signing files for signed images to work
-      - signing.sh
-     #- pre-install.sh
-      #- dotfiles.sh
-      - post-install.sh
-

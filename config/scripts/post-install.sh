@@ -10,8 +10,8 @@ set -oue pipefail
 # set sddm as default
 systemctl set-default graphical.target
 
-# enable display-manager
-systemctl enable display-manager
+# symlink creation
+ln -sf /usr/lib/systemd/system/sddm.service /etc/systemd/system/display-manager.service
 
 # latest distrobox
 #curl -s https://raw.githubusercontent.com/89luca89/distrobox/main/install | sudo sh
