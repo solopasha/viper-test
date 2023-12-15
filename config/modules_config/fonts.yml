@@ -1,10 +1,12 @@
-- type: fonts
-  fonts:
-    nerd-fonts:
-      - FiraCode # don't add "Nerd Font" suffix.
-      - Hack
-      - SourceCodePro
-      - Terminus
-      - JetBrainsMono
-      - NerdFontsSymbolsOnly
+# Here you can install fonts
+
+type: fonts
+fonts:
+  nerd-fonts:
+    - FiraCode # don't add "Nerd Font" suffix.
+    - Hack
+    - SourceCodePro
+    - Terminus
+    - JetBrainsMono
+    - NerdFontsSymbolsOnly
 

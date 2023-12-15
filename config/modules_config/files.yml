@@ -1,0 +1,9 @@
+# here you can copy files to another folder
+
+type: files
+files:
+  #- homedir: /usr/etc/skel # homedir must have a non-hidden folder or so that the recipe can copy
+  - usr: /usr # copy static configurations
+              # configuration you wish to end up in /etc/ on the booted system should be
+              # added into /usr/etc/ as that is the proper "distro" config directory on ostree
+              # read more in the files module's README
